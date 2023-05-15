@@ -54,7 +54,7 @@ class Chunk:
         return float32(self.audio.shape[0])
 
     def __repr__(self) -> str:
-        return f"Chunk(Speech: {self.is_speech}, {self.duration})"
+        return f"<<#{self.duration}#>> Chunk(Speech: {self.is_speech}, {self.duration})"
 
 
 def split_silence(
