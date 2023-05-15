@@ -203,7 +203,6 @@ class Svc:
             if speaker in self.spk2id.__dict__:
                 speaker_id = self.spk2id.__dict__[speaker]
             else:
-                LOG.warning(f"Speaker {speaker} is not found. Use speaker 0 instead.")
                 speaker_id = 0
         speaker_candidates = list(
             filter(lambda x: x[1] == speaker_id, self.spk2id.__dict__.items())
