@@ -77,8 +77,6 @@ class SynthesizerTrn(nn.Module):
         self.gen_istft_n_fft = gen_istft_n_fft
         self.gen_istft_hop_size = gen_istft_hop_size
         self.subbands = subbands
-        if kwargs:
-            warnings.warn(f"Unused arguments: {kwargs}")
 
         self.emb_g = nn.Embedding(n_speakers, gin_channels)
 
