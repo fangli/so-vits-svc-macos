@@ -33,8 +33,6 @@ IS_COLAB = os.getenv("COLAB_RELEASE_TAG", False)
 def get_optimal_device(index: int = 0) -> torch.device:
     if torch.cuda.is_available():
         return torch.device(f"cuda:{index % torch.cuda.device_count()}")
-    elif torch.backends.mps.is_available():
-        return torch.device("mps")
     else:
         try:
             import torch_xla.core.xla_model as xm  # noqa
